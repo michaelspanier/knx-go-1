@@ -72,7 +72,7 @@ func serveGroupInbound(inbound <-chan cemi.Message, outbound chan<- GroupEvent) 
 				util.Log(inbound, "Received L_Data.ind frame does not contain application data")
 			}
 		} else {
-			util.Log(inbound, "Received frame is not a L_Data.ind frame")
+			util.Log(inbound, "Received frame is not a L_Data.ind frame - %s - ", msg)
 		}
 	}
 
